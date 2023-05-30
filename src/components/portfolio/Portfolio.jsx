@@ -1,11 +1,8 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
-import IMG5 from "../../assets/portfolio5.png";
-import IMG6 from "../../assets/portfolio6.jpg";
+import IMG1 from "../../assets/portfolio1.png";
+import IMG2 from "../../assets/portfolio2.png";
+import IMG3 from "../../assets/portfolio3.png";
 
 // DO NOT USE THE IMAGES IN PRODUCTION
 
@@ -13,38 +10,20 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
+    title: "Frontend Accounting Project",
+    github: "https://github.com/danu999/migas-accounting-fe",
   },
   {
     id: 2,
     image: IMG2,
-    title: "Charts templates & infographics in Figma lorem.",
-    github: "https://github.com",
+    title: "E-Commerce Catalog Frinz Store",
+    github: "https://github.com/danu999/Project-E-commerce",
   },
   {
     id: 3,
     image: IMG3,
-    title: "Figma dashbord UI kit for data design web apps",
-    github: "https://github.com",
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: "Maintaining tasks and tracking progress",
-    github: "https://github.com",
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
+    title: "Figma design for website",
+    github: "https://www.figma.com/file/T5bYUkTvbWli1qHOwtAV9w/Sistem-Akuntasi?type=design&node-id=0-1&t=cKPrrcHedXKT8TvI-0",
   },
 ];
 
@@ -56,6 +35,21 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
         {data.map(({ id, image, title, github }) => {
+          if ( id === 3) {
+            return (
+              <article key={id} className="portfolio__item">
+              <div className="portfolio__item-image">
+                <img src={image} alt={title} />
+              </div>
+              <h3>{title}</h3>
+              <div className="portfolio__item-cta">
+                <a href={github} className="btn">
+                  Figma
+                </a>
+              </div>
+            </article>
+            )
+          }
           return (
             <article key={id} className="portfolio__item">
               <div className="portfolio__item-image">
@@ -63,7 +57,7 @@ const Portfolio = () => {
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn" target="_blank">
+                <a href={github} className="btn">
                   Github
                 </a>
               </div>
