@@ -12,14 +12,21 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_0rp1ita",
-      "template_s2oxqtn",
-      form.current,
-      "1p7gFuJALJdPyZ8_N"
-    );
-
-    e.target.reset();
+    emailjs
+      .sendForm(
+        "service_2af4mld",
+        "template_8cqf3le",
+        form.current,
+        "BU22lgU5lQvV2Gqt5"
+      )
+      .then((result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
   };
 
   return (
@@ -33,25 +40,19 @@ const Contact = () => {
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>danusaputraoffice@gmail.com</h5>
-            <a href="mailto:danusaputraoffice@gmail.com">
-              Send a message
-            </a>
+            <a href="mailto:danusaputraoffice@gmail.com">Send a message</a>
           </article>
           <article className="contact__option">
             <RiMessengerLine className="contact__option-icon" />
             <h4>Messenger</h4>
             <h5>Danu Saputra</h5>
-            <a href="https://m.me/acilkoplak">
-              Send a message
-            </a>
+            <a href="https://m.me/acilkoplak">Send a message</a>
           </article>
           <article className="contact__option">
             <BsWhatsapp className="contact__option-icon" />
             <h4>Whatsapp</h4>
             <h5>+62-81213033645</h5>
-            <a
-              href="https://api.whatsapp.com/send?phone=081213033645"
-            >
+            <a href="https://api.whatsapp.com/send?phone=081213033645">
               Send a message
             </a>
           </article>
