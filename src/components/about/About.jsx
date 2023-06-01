@@ -32,10 +32,10 @@ const About = () => {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam ipsa
-            doloribus omnis sint optio officia reiciendis quas numquam fugit,
-            doloremque labore? Vel ea harum dignissimos voluptatibus sit.
-            Ducimus, sed fugit.
+            Hello, my name is danu, I'am the second child of two siblings, I
+            live in Ciledug Tangerang South, I have a pretty good health, i
+            have one year experience in software engineer field, Please enjoy in
+            my portfolio website
           </p>
 
           <a href="#contact" className="btn btn-primary">
