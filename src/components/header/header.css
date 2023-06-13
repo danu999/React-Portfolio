@@ -40,14 +40,23 @@ header {
 .me {
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
-    height: 28rem;
+    height: 27rem;
     position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 5rem;
-    border-radius: 12rem 12rem 0 0;
+    left: 50%;
+    top: 16rem;
+    transform: translateX(-50%);
+    border-radius: 50%;
     overflow: hidden;
-    padding: 0.5rem 0.3rem 0.3rem 2rem;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .me img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+  }
 
 /* ================ SCROOL DOWN ============= */
 .scroll__down {

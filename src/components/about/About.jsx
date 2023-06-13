@@ -13,7 +13,7 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="About Image" />
+            <img src={ME} alt="AboutImage" />
           </div>
         </div>
 
@@ -33,9 +33,9 @@ const About = () => {
 
           <p>
             Hello, my name is danu, I'am the second child of two siblings, I
-            live in Ciledug Tangerang South, I have a pretty good health, i
-            have one year experience in software engineer field, Please enjoy in
-            my portfolio website
+            live in Ciledug Tangerang South, I have a pretty good health, i have
+            one year experience in software engineer field, Please enjoy in my
+            portfolio website
           </p>
 
           <a href="#contact" className="btn btn-primary">
